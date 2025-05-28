@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .pregunta {
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .respuesta {
+            display: none;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta1')">1. ¿Qué tipos de muebles ofrecen?</div>
+            <div id="respuesta1" class="respuesta">Ofrecemos una variedad de muebles, incluyendo salas, comedores, dormitorios y muebles de oficina, todos de alta calidad y diseño.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta2')">2. ¿Hacen entregas a domicilio?</div>
+            <div id="respuesta2" class="respuesta">Sí, ofrecemos servicio de entrega a domicilio en la mayoría de las áreas. Por favor, consulta nuestras políticas de entrega para más detalles.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta3')">3. ¿Cómo puedo realizar un pedido?</div>
+            <div id="respuesta3" class="respuesta">Puedes realizar un pedido a través de nuestra tienda en línea o visitarnos en nuestra tienda física. También puedes llamarnos para asistencia.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta4')">4. ¿Tienen garantía en sus productos?</div>
+            <div id="respuesta4" class="respuesta">Sí, todos nuestros productos vienen con una garantía. La duración y los términos de la garantía varían según el producto.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta5')">5. ¿Puedo devolver un mueble si no estoy satisfecho?</div>
+            <div id="respuesta5" class="respuesta">Sí, tenemos una política de devolución. Si no estás satisfecho con tu compra, puedes devolver el producto dentro de un plazo específico. Consulta nuestras políticas de devolución para más información.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta6')">6. ¿Ofrecen servicios de reparación?</div>
+            <div id="respuesta6" class="respuesta">Sí, ofrecemos servicios de reparación y restauración para mantener tus muebles en óptimas condiciones. Contáctanos para más detalles.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta7')">7. ¿Puedo personalizar mis muebles?</div>
+            <div id="respuesta7" class="respuesta">Sí, ofrecemos opciones de personalización en muchos de nuestros muebles. Puedes elegir dimensiones, acabados y estilos según tus preferencias.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="pregunta" onclick="toggleRespuesta('respuesta8')">8. ¿Cómo elijo el mueble adecuado para mi espacio?</div>
+            <div id="respuesta8" class="respuesta">Te recomendamos medir el espacio donde planeas colocar el mueble y considerar el estilo de decoración. Nuestro equipo también puede ayudarte a seleccionar el mueble ideal.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(id) {
+            var respuesta = document.getElementById(id);
+            if (respuesta.style.display === "none" || respuesta.style.display === "") {
+                respuesta.style.display = "block";
+            } else {
+                respuesta.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
