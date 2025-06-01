@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop - Tienda Online de Muebles</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Muebles de madera, veladores, camas, roperos, cocinas, escritorios, sofás, comedores, muebles de jardín, muebles infantiles, muebles de terraza, muebles de baño, tendencias de decoración, carpintería, muebles a medida, diseño de interiores" name="keywords">
+    <meta content="Descubre Mueblería Cosme: tu tienda online para muebles de alta calidad, personalizados y con estilo. Especialistas en carpintería y diseño de interiores para dormitorios, cocinas, oficinas, salas, comedores y exteriores." name="description">
+
+    <link href="img/icon.png" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row bg-secondary py-1 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="d-inline-flex align-items-center h-100">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li class="mr-3"><a class="text-body" href="acerca.html">Acerca de</a></li>
+                        <li class="mr-3"><a class="text-body" href="contact.html">Contacto</a></li>
+                        <li class="mr-3"><a class="text-body" href="servicios.html">Servicios</a></li>
+                        <li class="mr-3"><a class="text-body" href="centro_ayuda.html">Ayuda</a></li>
+                        <li class="mr-3"><a class="text-body" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Cuenta</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="cuenta.html">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="registro_usuario.html">Registrarse</a>
+                        </div>
+                    </div>
+                    <div class="btn-group mx-2">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contactos</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">(+51) 951 402 341</button>
+                            <button class="dropdown-item" type="button">MuebleriasCosme@gmail.com</button>
+                            <button class="dropdown-item" type="button">CosmeHuari25@gmail.com</button>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="centro_ayuda.html">Centro de Ayuda</a>
+                            <a class="dropdown-item" href="horario_atencion.html">Horario de Atención</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-inline-flex align-items-center d-block d-lg-none">
+                    <a href="productos_favoritos.html" class="btn px-0 ml-2" aria-label="Ver productos favoritos">
+                        <i class="fas fa-heart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                    <a href="cart.html" class="btn px-0 ml-2" aria-label="Ver carrito de compras">
+                        <i class="fas fa-shopping-cart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+            <div class="col-lg-4">
+                <a href="index.html" class="text-decoration-none">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">Cosme</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Store</span>
+                </a>
+            </div>
+            <div class="col-lg-4 col-6 text-left">
+                <form action="#">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar Producto" aria-label="Buscar Producto">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-6 text-right">
+                <p class="m-0">Servicio al Cliente</p>
+                <h5 class="m-0">(+51) 951 402 341</h5>
+            </div>
+        </div>
+    </header>
+    <nav class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;" aria-expanded="false" aria-controls="navbar-vertical">
+                    <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categorias</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 19;">
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dormitorios <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Camas</a>
+                                <a href="#" class="dropdown-item">Cabeceras y Respaldos</a>
+                                <a href="#" class="dropdown-item">Mesas de Noche</a>
+                                <a href="#" class="dropdown-item">Roperos y Clósets</a>
+                                <a href="#" class="dropdown-item">Espejos de Dormitorio</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cocinas <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Mesas para Cocina</a>
+                                <a href="#" class="dropdown-item">Sillas y Bancos</a>
+                                <a href="#" class="dropdown-item">Muebles para Electrodomésticos</a>
+                                <a href="#" class="dropdown-item">Bar y Mini Bares</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oficinas <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Escritorios</a>
+                                <a href="#" class="dropdown-item">Sillas de Oficina</a>
+                                <a href="#" class="dropdown-item">Estantes y Libreros</a>
+                                <a href="#" class="dropdown-item">Archivadores</a>
+                                <a href="#" class="dropdown-item">Muebles para Computadora</a>
+                                <a href="#" class="dropdown-item">Accesorios para Oficina</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salas<i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Sofás y Seccionales</a>
+                                <a href="#" class="dropdown-item">Sillones y Butacas</a>
+                                <a href="#" class="dropdown-item">Muebles para TV</a>
+                                <a href="#" class="dropdown-item">Vitrinas y Consolas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comedores <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Mesas de Comedor</a>
+                                <a href="#" class="dropdown-item">Sillas de Comedor</a>
+                                <a href="#" class="dropdown-item">Bancos para Comedor</a>
+                                <a href="#" class="dropdown-item">Buffets y Credenzas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jardín y Exteriores <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Mesas de Jardín</a>
+                                <a href="#" class="dropdown-item">Sillas y Bancos de Exterior</a>
+                                <a href="#" class="dropdown-item">Salas para Exteriores</a>
+                                <a href="#" class="dropdown-item">Hamacas y Columpios</a>
+                                <a href="#" class="dropdown-item">Sombrillas y Pérgolas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infantiles <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Camas Infantiles</a>
+                                <a href="#" class="dropdown-item">Escritorios para Niños</a>
+                                <a href="#" class="dropdown-item">Cajoneras y Estanterías Infantiles</a>
+                                <a href="#" class="dropdown-item">Sillas para Niños</a>
+                                <a href="#" class="dropdown-item">Mesas de Juego</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Terraza<i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Muebles de Exterior</a>
+                                <a href="#" class="dropdown-item">Sombrillas y Toldos</a>
+                                <a href="#" class="dropdown-item">Sillas y Mesas de Jardín</a>
+                                <a href="#" class="dropdown-item">Decoración para Terraza</a>
+                                <a href="#" class="dropdown-item">Cojines y Textiles Exteriores</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baño<i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Muebles de Baño</a>
+                                <a href="#" class="dropdown-item">Espejos</a>
+                                <a href="#" class="dropdown-item">Accesorios de Baño</a>
+                                <a href="#" class="dropdown-item">Cestas de Almacenamiento</a>
+                                <a href="#" class="dropdown-item">Textiles de Baño</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tendencias<i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="#" class="dropdown-item">Estilos de Decoración</a>
+                                <a href="#" class="dropdown-item">Nuevos Productos</a>
+                                <a href="#" class="dropdown-item">Consejos de Estilo</a>
+                                <a href="#" class="dropdown-item">Inspiración para el Hogar</a>
+                                <a href="#" class="dropdown-item">Ofertas y Promociones</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <a href="index.html" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Tienda</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto py-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="shop.html" class="nav-link">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="detail.html" class="nav-link active">Detalles de la Compra</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pagos<i class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                    <a href="cart.html" class="dropdown-item">Carrito de Compra</a>
+                                    <a href="checkout.html" class="dropdown-item">Verificar</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contacto</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+                            <a href="productos_favoritos.html" class="btn px-0" aria-label="Ver productos favoritos">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 5px;">Favoritos</span>
+                            </a>
+                            <a href="cart.html" class="btn px-0 ml-3" aria-label="Ver carrito de compras">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 5px;">Carrito</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
+    <section class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="shop.html">Tienda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Detalle de la tienda</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <main class="container-fluid pb-5">
+        <div class="row px-xl-5">
+            <section class="col-lg-5 mb-30">
+                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner bg-light">
+                        <div class="carousel-item active">
+                            <img class="w-100 h-100" src="img/p20.jpg" alt="Velador de madera capirona, tono naranja">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/p20.jpg" alt="Velador de madera capirona, tono claro">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/p20.jpg" alt="Velador de madera capirona, tono marrón oscuro">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#product-carousel" data-slide="prev" aria-label="Anterior">
+                        <i class="fa fa-2x fa-angle-left text-dark"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#product-carousel" data-slide="next" aria-label="Siguiente">
+                        <i class="fa fa-2x fa-angle-right text-dark"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="col-lg-7 h-auto mb-30">
+                <div class="h-100 bg-light p-30">
+                    <h1 class="mb-2">VELADOR DE MADERA CAPIRONA</h1>
+                    <div class="d-flex mb-3">
+                        <div class="text-primary mr-2">
+                            <small class="fas fa-star"></small>
+                            <small class="fas fa-star"></small>
+                            <small class="fas fa-star"></small>
+                            <small class="fas fa-star-half-alt"></small>
+                            <small class="far fa-star"></small>
+                        </div>
+                        <small class="pt-1">(99 Reseñas)</small>
+                    </div>
+                    <h2 class="font-weight-semi-bold mb-4">S/259.99 <span class="text-muted ml-2" style="text-decoration: line-through;">S/279.00</span></h2>
+                    <p class="mb-4">Elegante velador fabricado en madera maciza de capirona, ideal para complementar cualquier dormitorio. Su diseño sencillo y funcional incorpora tres amplios cajones y una práctica repisa superior, ofreciendo un almacenamiento versátil. Disponible en acabados que se adaptan a diversos estilos de decoración.</p>
+
+                    <fieldset class="mb-3">
+                        <legend class="text-dark font-weight-bold mr-3">Colores Disponibles:</legend>
+                        <div class="d-flex flex-wrap">
+                            <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-naranja" name="product-color" value="naranja" class="mr-2">
+                                <label for="color-naranja" class="mb-0">
+                                    <span class="color-dot" style="background-color: #ea8e35;"></span> Tono Naranja
+                                    <span class="badge badge-success ml-2">En Stock (25)</span>
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-claro" name="product-color" value="claro" class="mr-2">
+                                <label for="color-claro" class="mb-0">
+                                    <span class="color-dot" style="background-color: #fbfadb;"></span> Tono Claro
+                                    <span class="badge badge-warning ml-2">Pocas Unidades (7)</span>
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-marron-oscuro" name="product-color" value="marron-oscuro" class="mr-2">
+                                <label for="color-marron-oscuro" class="mb-0">
+                                    <span class="color-dot" style="background-color: #512316;"></span> Tono Marrón Oscuro
+                                    <span class="badge badge-info ml-2">Disponible para Pre-Orden</span>
+                                </label>
+                            </div>
+                             <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-blanco" name="product-color" value="blanco" class="mr-2">
+                                <label for="color-blanco" class="mb-0">
+                                    <span class="color-dot" style="background-color: #ffffff; border: 1px solid #ccc;"></span> Blanco Clásico
+                                    <span class="badge badge-success ml-2">En Stock (20)</span>
+                                </label>
+                            </div>
+                             <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-negro" name="product-color" value="negro" class="mr-2">
+                                <label for="color-negro" class="mb-0">
+                                    <span class="color-dot" style="background-color: #000000;"></span> Negro Mate
+                                    <span class="badge badge-success ml-2">En Stock (18)</span>
+                                </label>
+                            </div>
+                             <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-roble" name="product-color" value="roble" class="mr-2">
+                                <label for="color-roble" class="mb-0">
+                                    <span class="color-dot" style="background-color: #a0522d;"></span> Roble Natural
+                                    <span class="badge badge-warning ml-2">Pocas Unidades (5)</span>
+                                </label>
+                            </div>
+                             <div class="d-flex align-items-center mr-4 mb-2">
+                                <input type="radio" id="color-gris" name="product-color" value="gris" class="mr-2">
+                                <label for="color-gris" class="mb-0">
+                                    <span class="color-dot" style="background-color: #808080;"></span> Gris Cálido
+                                    <span class="badge badge-info ml-2">Pre-Orden (Llegada en 3 semanas)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="d-flex align-items-center mb-4 pt-2">
+                        <div class="input-group quantity mr-3" style="width: 130px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-minus">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control bg-secondary border-0 text-center" value="1" aria-label="Cantidad del producto">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-plus">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="row px-xl-5">
+            <div class="col">
+                <div class="bg-light p-30">
+                    <div class="nav nav-tabs mb-4">
+                        <a class="nav-item nav-link text-dark active" data-toggle="tab" href="#tab-pane-desc" aria-controls="tab-pane-desc" aria-selected="true">Descripción</a>
+                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-about" aria-controls="tab-pane-about" aria-selected="false">Acerca De Nosotros</a>
+                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-mission" aria-controls="tab-pane-mission" aria-selected="false">Misión</a>
+                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-vision" aria-controls="tab-pane-vision" aria-selected="false">Visión</a>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab-pane-desc" role="tabpanel" aria-labelledby="tab-pane-desc-tab">
+                            <h3 class="mb-3">Descripción del Producto</h3>
+                            <p>El velador de madera Capirona es una pieza robusta y elegante, ideal para aportar funcionalidad y estilo a tu dormitorio. Fabricado con madera de capirona de alta calidad, garantiza durabilidad y una belleza natural que perdura. Cuenta con tres cajones de fácil apertura para un almacenamiento organizado de tus objetos personales y una superficie superior perfecta para una lámpara, libros o decoraciones. Su diseño atemporal se integra a la perfección con diferentes estilos de decoración, desde el rústico hasta el moderno. Disponible en varios tonos para que encuentres el que mejor se adapte a tu espacio.</p>
+                            <ul>
+                                <li><strong>Material:</strong> Madera maciza de Capirona.</li>
+                                <li><strong>Dimensiones:</strong> (Ejemplo: Altura: 60cm, Ancho: 45cm, Profundidad: 35cm - *Ajustar según producto real*)</li>
+                                <li><strong>Cajones:</strong> 3 con tiradores discretos.</li>
+                                <li><strong>Acabados:</strong> Tono Naranja, Tono Claro, Tono Marrón Oscuro, Blanco Clásico, Negro Mate, Roble Natural, Gris Cálido.</li>
+                                <li><strong>Ideal para:</strong> Dormitorios, salas de estar pequeñas o como mesa auxiliar.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-about" role="tabpanel" aria-labelledby="tab-pane-about-tab">
+                            <h3 class="mb-3">Acerca De Nosotros</h3>
+                            <p>En **Mueblería Cosme**, nos apasiona crear espacios únicos y funcionales que reflejen su estilo y personalidad. Con más de 5 años de experiencia, somos líderes en la fabricación de muebles a medida y servicios de carpintería.</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-mission" role="tabpanel" aria-labelledby="tab-pane-mission-tab">
+                            <h3 class="mb-3">Nuestra Misión</h3>
+                            <p>Proveer muebles de alta calidad que integren la tradición de la carpintería artesanal con diseños funcionales y accesibles, adaptados a las necesidades y preferencias de cada cliente. Nos esforzamos por ofrecer servicios confiables e integrales en venta, reparación y fabricación personalizada, priorizando la satisfacción del cliente mediante un trato cercano, precios optimizados y un compromiso con la durabilidad. Valoramos la sostenibilidad, utilizando materiales responsables que aseguren la calidad y el impacto positivo tanto en los hogares como en el entorno.</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-vision" role="tabpanel" aria-labelledby="tab-pane-vision-tab">
+                            <h3 class="mb-3">Nuestra Visión</h3>
+                            <p>Nuestra visión es satisfacer plenamente a nuestros clientes al ofrecer muebles personalizados de alta calidad, diseñados para adaptarse a sus necesidades y estilos de vida. Nos comprometemos a garantizar la mejor relación entre calidad y precio, brindando soluciones confiables y accesibles. Con un enfoque en el detalle, la funcionalidad y un trato cercano, crear espacios únicos y acogedores que superen las expectativas de cada cliente en base a sus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid bg-dark text-secondary mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4"><b>ACERCA DE</b></h5>
+                <p class="mb-4">Nuestro estudio de diseño ayuda a los clientes a tomar decisiones inteligentes y evitar errores costosos. Permita que nuestros diseñadores y arquitectos hagan realidad el espacio de sus sueños.</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>San Sebastian, Alto Qosqo, CA San Hilarion</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>MuebleriasCosme@gmail.com, CosmeHuari25@gmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>(+51) 951 402 341</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>Ofrecemos</b></h5>
+                        <ul class="list-unstyled d-flex flex-column justify-content-start">
+                            <li class="mb-2"><a class="text-secondary" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Nuestra tienda</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Detalles de la tienda</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Carrito de la compra</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Verificar</a></li>
+                            <li><a class="text-secondary" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contáctenos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>Servicios</b></h5>
+                        <ul class="list-unstyled d-flex flex-column justify-content-start">
+                            <li class="mb-2"><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Tapizados</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Restauración</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Pintura</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Tratamientos</a></li>
+                            <li class="mb-2"><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Recubrimiento</a></li>
+                            <li><a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Instalaciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>Contáctanos!</b></h5>
+                        <p>Contáctanos y mantente al tanto de nuestras últimas ofertas y promociones.</p>
+                        <form method="post" action="registro_correo.html">
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="correo" placeholder="Ingresar Email" required aria-label="Ingresar Email para Suscripción">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="text-secondary text-uppercase mt-4 mb-3">Síguenos en nuestras Redes Sociales</h6>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">Mueblería Cosme</a>. Todos los derechos reservados. Diseñado por
+                    <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="Métodos de pago">
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <style>
+        .color-dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+        // Optional: JavaScript to handle color selection and update potentially price/image
+        $(document).ready(function() {
+            $('input[name="product-color"]').change(function() {
+                var selectedColor = $(this).val();
+                // Here you would typically update the main product image or price based on the selected color
+                // For demonstration, we'll just log to console.
+                console.log('Color seleccionado:', selectedColor);
+
+                // Example: Change main carousel image based on selected color
+                if (selectedColor === 'naranja') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20.jpg');
+                } else if (selectedColor === 'claro') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_light.jpg'); // Assuming you have an image like this
+                } else if (selectedColor === 'marron-oscuro') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_dark.jpg'); // Assuming you have an image like this
+                } else if (selectedColor === 'blanco') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_white.jpg'); // Assuming you have an image like this
+                } else if (selectedColor === 'negro') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_black.jpg'); // Assuming you have an image like this
+                } else if (selectedColor === 'roble') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_oak.jpg'); // Assuming you have an image like this
+                } else if (selectedColor === 'gris') {
+                    $('#product-carousel .carousel-inner .carousel-item.active img').attr('src', 'img/p20_gray.jpg'); // Assuming you have an image like this
+                }
+                // In a real application, you'd likely update the active carousel item or load a new image dynamically.
+            });
+        });
+    </script>
+
+
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+</body>
+
+</html>

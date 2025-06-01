@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda y Soporte | Tu Tienda de Muebles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFC107; /* Amarillo vibrante */
+            --dark-blue: #2c3e50;    /* Azul oscuro para contraste */
+            --light-grey: #f8f9fa;   /* Fondo general */
+            --medium-grey: #e9ecef;  /* Sutil para bordes */
+            --text-color: #34495e;   /* Texto principal */
+            --white: #ffffff;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            --border-radius-main: 12px;
+            --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-grey);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea arriba si el contenido es corto */
+            min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+        }
+
+        .help-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--white);
+            padding: 35px 40px;
+            border-radius: var(--border-radius-main);
+            box-shadow: var(--shadow-subtle);
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Para las formas decorativas */
+        }
+
+        /* Formas decorativas con amarillo */
+        .help-container::before,
+        .help-container::after {
+            content: '';
+            position: absolute;
+            background-color: var(--primary-yellow);
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .help-container::before {
+            width: 150px;
+            height: 150px;
+            top: -30px;
+            left: -30px;
+            animation: floatShape 10s ease-in-out infinite alternate;
+        }
+
+        .help-container::after {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: -50px;
+            animation: floatShape 12s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floatShape {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10px, 10px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8em;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1; /* Asegura que el texto esté sobre las formas */
+        }
+
+        .subtitle {
+            font-size: 1.15em;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            background-color: var(--medium-grey);
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            flex: 1 1 280px; /* Permite que los ítems se expandan pero tengan un tamaño mínimo */
+            max-width: 32%; /* Limita el ancho para 3 columnas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary-yellow); /* El amarillo como fondo al pasar el ratón */
+            color: var(--dark-blue);
+        }
+
+        .contact-item i {
+            font-size: 2.5em;
+            color: var(--dark-blue); /* Íconos en azul oscuro por defecto */
+            margin-bottom: 15px;
+        }
+
+        .contact-item:hover i {
+            color: var(--dark-blue); /* Mantener el color del ícono si el fondo cambia a amarillo */
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: var(--dark-blue);
+        }
+
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover a {
+            color: var(--dark-blue); /* Texto del enlace se vuelve azul oscuro al pasar el ratón */
+        }
+        
+        .contact-item .description {
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        .contact-item:hover .description {
+            color: var(--dark-blue);
+        }
+
+
+        .faq-section {
+            background-color: var(--white);
+            border-radius: var(--border-radius-main);
+            padding: 30px;
+            margin-top: 30px;
+            border-top: 2px solid var(--primary-yellow); /* Separador amarillo */
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--medium-grey);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--dark-blue);
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: var(--primary-yellow);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            color: var(--text-color);
+            font-size: 1em;
+            padding-left: 25px; /* Indentación para la respuesta */
+            display: none; /* Oculta la respuesta por defecto */
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .external-links {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .external-links a {
+            color: var(--primary-yellow);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .external-links a:hover {
+            color: var(--dark-blue);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .help-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .contact-item {
+                flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+                max-width: 100%;
+            }
+            .faq-section {
+                padding: 20px;
+            }
+            .faq-question {
+                font-size: 1.05em;
+            }
+            .faq-answer {
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="help-container">
+        <h1>Centro de Ayuda y Soporte</h1>
+        <p class="subtitle">Bienvenido al Centro de Ayuda de nuestra tienda de muebles. Estamos aquí para responder a tus preguntas y ayudarte con todo lo que necesites, desde la elección de tu mueble ideal hasta su cuidado y mantenimiento.</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <strong>Email de Contacto</strong>
+                <a href="mailto:contacto@tiendademuebles.com">contacto@tiendademuebles.com</a>
+                <span class="description">Respuesta en menos de 24 horas.</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Llámanos</strong>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <span class="description">Atención personalizada.</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <strong>Horario de Atención</strong>
+                <a href="horario_atencion.html">Ver horarios</a>
+                <span class="description">Encuéntranos disponibles.</span>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Preguntas Frecuentes (FAQs)</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué tipos de muebles ofrecen?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer">
+                    Ofrecemos una amplia selección de muebles para el hogar y la oficina, incluyendo sofás, mesas de comedor y auxiliares, sillas ergonómicas, camas de diseño, estanterías modulares, armarios empotrados y soluciones de almacenamiento personalizadas. Nos especializamos en piezas de alta calidad y durabilidad.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Realizan envíos a domicilio y cuál es el costo?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer">
+                    Sí, ofrecemos servicio de envío a domicilio a nivel nacional. Los costos varían según el tamaño del pedido y la ubicación de entrega. Puedes consultar el costo exacto en el carrito de compras al finalizar tu pedido o contactarnos directamente para un presupuesto.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cuánto tiempo duran las reparaciones?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer">
+                    El tiempo estimado para las reparaciones de muebles depende de la complejidad del daño y la disponibilidad de materiales. Generalmente, las reparaciones menores se completan en 3-5 días hábiles, mientras que las restauraciones más extensas pueden tomar entre 7 y 15 días hábiles. Te daremos un plazo más preciso al evaluar tu mueble.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Ofrecen garantía en sus productos?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer">
+                    Absolutamente. Todos nuestros muebles y servicios de reparación vienen con una garantía completa. La mayoría de nuestros productos nuevos tienen una garantía de 2 años contra defectos de fabricación. Las reparaciones también cuentan con una garantía específica sobre el trabajo realizado. Para más detalles, consulta nuestra política de garantía completa.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Puedo personalizar un mueble a mi gusto?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer">
+                    ¡Claro que sí! Nos especializamos en la creación de muebles a medida. Puedes elegir dimensiones, materiales, acabados y detalles para que el mueble se adapte perfectamente a tus necesidades y estilo. Contáctanos para agendar una consulta de diseño.
+                </div>
+            </div>
+        </div>
+
+        <p class="external-links">
+            Para más información, también puedes visitar nuestra <a href="faq.html">sección completa de Preguntas Frecuentes</a>.
+        </p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+
+                // Close all other open FAQs
+                document.querySelectorAll('.faq-answer.show').forEach(openAnswer => {
+                    if (openAnswer !== answer) {
+                        openAnswer.classList.remove('show');
+                        openAnswer.previousElementSibling.querySelector('i').classList.remove('active');
+                    }
+                });
+
+                // Toggle current FAQ
+                answer.classList.toggle('show');
+                icon.classList.toggle('active');
+            });
+        });
+    </script>
+
+
+<button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+</body>
+</html>

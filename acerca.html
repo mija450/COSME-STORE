@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros | Mueblería Cosme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFC107; /* Amarillo vibrante */
+            --dark-blue: #2c3e50;    /* Azul oscuro para contraste */
+            --light-grey: #ecf0f1;   /* Fondo general */
+            --medium-grey: #bdc3c7;  /* Gris medio para bordes sutiles */
+            --text-color: #34495e;   /* Texto principal */
+            --white: #ffffff;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --border-radius-main: 12px;
+            --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-grey);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: var(--white);
+            padding: 35px 40px;
+            border-radius: var(--border-radius-main);
+            box-shadow: var(--shadow-subtle);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Formas decorativas con amarillo */
+        .about-container::before,
+        .about-container::after {
+            content: '';
+            position: absolute;
+            background-color: var(--primary-yellow);
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .about-container::before {
+            width: 150px;
+            height: 150px;
+            top: -30px;
+            left: -30px;
+            animation: floatShape 10s ease-in-out infinite alternate;
+        }
+
+        .about-container::after {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: -50px;
+            animation: floatShape 12s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floatShape {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10px, 10px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3em;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-yellow);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            text-align: left;
+        }
+
+        section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+            padding-left: 15px; /* Para el ícono o decorador */
+        }
+
+        section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 100%;
+            background-color: var(--primary-yellow);
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 1.05em;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background-color: var(--light-grey);
+            border-left: 5px solid var(--primary-yellow);
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            font-style: italic;
+            font-size: 1.1em;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .highlight-box strong {
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            section h2 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            section h2 {
+                font-size: 1.6em;
+            }
+            .highlight-box {
+                font-size: 1em;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-container">
+        <h1>Conoce Mueblería Cosme</h1>
+        
+        <section>
+            <h2>Nuestra Historia</h2>
+            <p>En **Mueblería Cosme**, transformamos la madera en piezas de arte y funcionalidad para tu hogar y oficina. Con **más de 5 años de experiencia** en la industria, nos hemos consolidado como líderes en la **fabricación de muebles a medida** y en servicios de carpintería de alta calidad. Lo que comenzó como un pequeño taller impulsado por la pasión por la madera, hoy es un referente de diseño, durabilidad y atención al detalle.</p>
+            <p>Nuestro equipo de **expertos artesanos** trabaja mano a mano con cada cliente, escuchando sus ideas y entendiendo sus necesidades. Así, podemos ofrecer **soluciones personalizadas** que no solo cumplen, sino que superan las expectativas, creando espacios que realmente reflejan el estilo y la personalidad de cada uno.</p>
+        </section>
+
+        <div class="highlight-box">
+            "Cada mueble de Mueblería Cosme es una declaración de **calidad, diseño y compromiso** con tu hogar."
+        </div>
+
+        <section>
+            <h2>Nuestra Filosofía</h2>
+            <p>Nos enorgullece la meticulosidad con la que seleccionamos y utilizamos **materiales de primera calidad**, combinando la riqueza de las **técnicas tradicionales de carpintería** con las líneas y estéticas de los **diseños contemporáneos**. Cada corte, cada unión y cada acabado se realizan con una atención obsesiva al detalle, asegurando que cada mueble no solo sea una belleza visual, sino también una inversión **duradera y funcional**.</p>
+            <p>Además de la creación de muebles nuevos, extendemos nuestra experiencia a los **servicios de reparación y restauración**. Creemos firmemente en la vida útil de un buen mueble; por ello, ayudamos a nuestros clientes a preservar sus piezas más preciadas, devolviéndoles su esplendor original y prolongando su historia en sus hogares.</p>
+        </section>
+
+        <section>
+            <h2>Compromiso con la Sostenibilidad</h2>
+            <p>En Mueblería Cosme, somos conscientes de nuestra responsabilidad con el planeta. Estamos profundamente **comprometidos con la sostenibilidad y el respeto ambiental**, utilizando materiales de origen responsable y aplicando procesos de producción que minimizan nuestro impacto ecológico. Priorizamos la **madera certificada** y los **acabados ecológicos** para asegurar que, al embellecer tu espacio, también contribuyamos a un futuro más verde y sostenible.</p>
+            <p>Nuestro objetivo no es solo decorar hogares, sino también ser un aliado en la construcción de un mundo mejor a través de prácticas conscientes y productos de calidad.</p>
+        </section>
+
+        <section>
+            <h2>Nuestra Visión</h2>
+            <p>Nuestra visión es ser reconocidos como el principal referente en la fabricación de muebles personalizados y servicios de carpintería, donde la **innovación** se encuentre con la **artesanía** para crear espacios que inspiren. Aspiramos a ser la primera opción para aquellos que buscan muebles que no solo sean funcionales y bellos, sino que también cuenten una historia y perduren en el tiempo.</p>
+        </section>
+
+        <section>
+            <h2>Nuestra Misión</h2>
+            <p>Proveer muebles de alta calidad que integren la tradición de la carpintería artesanal con **diseños funcionales y accesibles**, adaptados a las necesidades y preferencias de cada cliente. Nos esforzamos por ofrecer **servicios confiables e integrales** en venta, reparación y fabricación personalizada, priorizando la satisfacción del cliente mediante un trato cercano, atención personalizada y precios optimizados. Nuestra propuesta incluye el uso de **materiales responsables y técnicas sostenibles**, como la utilización de madera certificada y acabados ecológicos, para asegurar un impacto positivo tanto en los hogares como en el entorno. Nos comprometemos a ser un aliado confiable en la creación de espacios que reflejen la personalidad y estilo de vida de cada cliente.</p>
+        </section>
+
+        <p style="margin-top: 40px; font-size: 1.1em; color: var(--dark-blue); font-weight: 600;">
+            Gracias por considerar a Mueblería Cosme para tus necesidades de mobiliario. ¡Estamos aquí para ayudarte a crear el espacio de tus sueños!
+        </p>
+    </div>
+
+
+
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+</body>
+</html>

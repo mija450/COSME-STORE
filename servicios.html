@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Exclusivos | Tu Carpintería con Estilo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-yellow: #FFD700; /* Amarillo Oro brillante */
+            --dark-blue: #2c3e50;    /* Azul oscuro casi negro */
+            --light-grey: #ecf0f1;   /* Gris claro */
+            --medium-grey: #bdc3c7;  /* Gris medio */
+            --white: #ffffff;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --border-radius-card: 10px;
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-grey);
+            color: var(--dark-blue);
+            line-height: 1.7;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+        }
+
+        .services-header {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-header p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--medium-grey);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Elemento decorativo en el encabezado */
+        .services-header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-yellow);
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(80px);
+            animation: moveShape1 15s infinite alternate;
+        }
+
+        .services-header::after {
+            content: '';
+            position: absolute;
+            bottom: -70px;
+            right: -70px;
+            width: 250px;
+            height: 250px;
+            background-color: var(--primary-yellow);
+            border-radius: 50%;
+            opacity: 0.15;
+            filter: blur(100px);
+            animation: moveShape2 20s infinite alternate-reverse;
+        }
+
+        @keyframes moveShape1 {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 50px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        @keyframes moveShape2 {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-60px, -60px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: -40px auto 60px auto; /* Se superpone ligeramente al header */
+            padding: 30px;
+            background: var(--white);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-light);
+            position: relative;
+            z-index: 2; /* Para que quede por encima del fondo del header */
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .category {
+            background-color: var(--white);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--medium-grey); /* Borde sutil */
+        }
+
+        .category:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .category-header {
+            background-color: var(--dark-blue);
+            color: var(--primary-yellow);
+            padding: 18px 20px;
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 1.6em;
+            border-bottom: 4px solid var(--primary-yellow); /* Destaca la categoría */
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 25px 20px;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .service-item {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            color: var(--dark-blue);
+            border-bottom: 1px dashed var(--light-grey); /* Línea punteada sutil */
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-item::before {
+            content: '\2022'; /* Punto gordo unicode */
+            color: var(--primary-yellow);
+            font-size: 1.8em; /* Tamaño del punto */
+            line-height: 1;
+            margin-right: 10px;
+            flex-shrink: 0; /* Evita que el punto se encoja */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-header {
+                padding: 40px 15px;
+            }
+
+            .services-header h1 {
+                font-size: 2.5em;
+            }
+
+            .services-header p {
+                font-size: 1em;
+            }
+
+            .services-container {
+                margin: -20px auto 40px auto;
+                padding: 20px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="services-header">
+        <h1>Explora Nuestros Servicios de Carpintería</h1>
+        <p>En **[Tu Nombre/Marca de Carpintería]** transformamos la madera en soluciones duraderas y diseños únicos. Desde la creación de muebles personalizados hasta la restauración de piezas antiguas, nuestra pasión es dar vida a tus ideas.</p>
+    </header>
+
+    <div class="services-container">
+        <div class="category-grid">
+            <div class="category">
+                <div class="category-header">Fabricación de Muebles</div>
+                <ul class="service-list">
+                    <li class="service-item">Sillas, mesas y sofás a medida</li>
+                    <li class="service-item">Camas y cabeceros exclusivos</li>
+                    <li class="service-item">Estanterías y librerías personalizadas</li>
+                    <li class="service-item">Armarios y closets empotrados</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Reparación y Restauración</div>
+                <ul class="service-list">
+                    <li class="service-item">Restauración de muebles antiguos</li>
+                    <li class="service-item">Reparación de daños en cualquier tipo de mueble</li>
+                    <li class="service-item">Reacabado de superficies y barnizado</li>
+                    <li class="service-item">Tapicería y retapizado profesional</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Carpintería de Obra</div>
+                <ul class="service-list">
+                    <li class="service-item">Fabricación e instalación de puertas</li>
+                    <li class="service-item">Fabricación e instalación de ventanas</li>
+                    <li class="service-item">Marcos, molduras y zócalos</li>
+                    <li class="service-item">Techos y revestimientos de madera</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Ebanistería Artesanal</div>
+                <ul class="service-list">
+                    <li class="service-item">Incrustaciones y marquetería fina</li>
+                    <li class="service-item">Tallado de madera a mano</li>
+                    <li class="service-item">Construcción de muebles de lujo y personalizados</li>
+                    <li class="service-item">Piezas artísticas en madera</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Carpintería Exterior</div>
+                <ul class="service-list">
+                    <li class="service-item">Diseño y construcción de terrazas y porches</li>
+                    <li class="service-item">Pérgolas y cenadores personalizados</li>
+                    <li class="service-item">Vallas, cercas y barandales</li>
+                    <li class="service-item">Muebles de jardín duraderos</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Estructuras de Madera</div>
+                <ul class="service-list">
+                    <li class="service-item">Construcción de casas de madera</li>
+                    <li class="service-item">Cobertizos y casetas de herramientas</li>
+                    <li class="service-item">Garajes y extensiones en madera</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Diseño de Cocinas</div>
+                <ul class="service-list">
+                    <li class="service-item">Armarios y módulos de cocina a medida</li>
+                    <li class="service-item">Islas de cocina funcionales y estéticas</li>
+                    <li class="service-item">Despensas y soluciones de almacenamiento</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Carpintería Decorativa</div>
+                <ul class="service-list">
+                    <li class="service-item">Paneles de pared decorativos</li>
+                    <li class="service-item">Artesanía y elementos ornamentales</li>
+                    <li class="service-item">Marcos de cuadros y espejos</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Suelos y Revestimientos</div>
+                <ul class="service-list">
+                    <li class="service-item">Instalación de suelos de madera (parquet, laminado)</li>
+                    <li class="service-item">Revestimientos de paredes y techos</li>
+                    <li class="service-item">Pulido y mantenimiento de suelos</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Carpintería Náutica</div>
+                <ul class="service-list">
+                    <li class="service-item">Construcción y reparación de barcos de madera</li>
+                    <li class="service-item">Mobiliario interior para embarcaciones</li>
+                    <li class="service-item">Restauración de elementos náuticos</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Puertas y Ventanas</div>
+                <ul class="service-list">
+                    <li class="service-item">Fabricación e instalación de puertas de entrada</li>
+                    <li class="service-item">Ventanas de madera a medida</li>
+                    <li class="service-item">Puertas corredizas y plegables</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Escaleras a Medida</div>
+                <ul class="service-list">
+                    <li class="service-item">Diseño y construcción de escaleras de madera</li>
+                    <li class="service-item">Pasamanos y barandillas personalizadas</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Mobiliario de Oficina</div>
+                <ul class="service-list">
+                    <li class="service-item">Escritorios y mesas de trabajo ergonómicos</li>
+                    <li class="service-item">Estanterías y archivadores de oficina</li>
+                    <li class="service-item">Mesas de conferencias personalizadas</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Sistemas de Almacenamiento</div>
+                <ul class="service-list">
+                    <li class="service-item">Diseño e instalación de vestidores</li>
+                    <li class="service-item">Alacenas y despenseros inteligentes</li>
+                    <li class="service-item">Cajoneras y organizadores internos</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Espacios Comerciales</div>
+                <ul class="service-list">
+                    <li class="service-item">Mobiliario comercial a medida</li>
+                    <li class="service-item">Mostradores y recepciones únicos</li>
+                    <li class="service-item">Expositores y vitrinas atractivas</li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="category-header">Consultoría y Diseño</div>
+                <ul class="service-list">
+                    <li class="service-item">Asesoramiento en diseño de interiores con madera</li>
+                    <li class="service-item">Planificación de proyectos a medida</li>
+                    <li class="service-item">Visualizaciones 3D de tus ideas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cosme Store - Tu Tienda Online de Muebles</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Tienda online de muebles, camas, mesas, roperos, escritorios, decoración para el hogar, muebles de oficina, muebles de jardín, muebles infantiles. Mueblería en Cusco, Perú." name="keywords">
+    <meta content="Explora Cosme Store, tu destino ideal para muebles de calidad. Ofrecemos una amplia selección de muebles para dormitorio, cocina, oficina, sala, comedor y exteriores. ¡Encuentra el mueble perfecto para tu hogar en Cusco!" name="description">
+
+    <link href="img/favicon.ico" rel="icon"> <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid bg-secondary py-1 px-xl-5">
+        <div class="row align-items-center no-gutters">
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="d-inline-flex align-items-center h-100">
+                    <a class="text-body mr-3" href="acerca.html">Acerca de</a>
+                    <a class="text-body mr-3" href="contact.html">Contacto</a>
+                    <a class="text-body mr-3" href="servicios.html">Servicios</a>
+                    <a class="text-body mr-3" href="centro_ayuda.html">Ayuda</a>
+                    <a class="text-body mr-3" href="preguntas_frecuentes.html">Preguntas Frecuentes</a>
+                </nav>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Cuenta</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="cuenta.html">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="registro_usuario.html">Registrarse</a>
+                        </div>
+                    </div>
+                    <div class="btn-group mx-2">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contactos</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <span class="dropdown-item">(+51) 951 402 341</span> <span class="dropdown-item">MuebleriasCosme@gmail.com</span>
+                            <span class="dropdown-item">CosmeHuari25@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="centro_ayuda.html">Centro de Ayuda</a>
+                            <a class="dropdown-item" href="horario_atencion.html">Horario de Atención</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-inline-flex align-items-center d-block d-lg-none">
+                    <a href="productos_favoritos.html" class="btn px-0 ml-2" aria-label="Ver productos favoritos">
+                        <i class="fas fa-heart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                    <a href="cart.html" class="btn px-0 ml-2" aria-label="Ver carrito de compras">
+                        <i class="fas fa-shopping-cart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light py-3 px-xl-5 d-none d-lg-flex">
+        <div class="row align-items-center justify-content-between w-100 no-gutters">
+            <div class="col-lg-4">
+                <a href="index.html" class="text-decoration-none">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">Cosme</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Store</span>
+                </a>
+            </div>
+            <div class="col-lg-4 col-6 text-left">
+                <form action="#" method="GET"> <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar Producto" aria-label="Buscar producto">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn bg-transparent text-primary" aria-label="Botón de búsqueda">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-6 text-right">
+                <p class="m-0">Servicio al Cliente</p>
+                <h5 class="m-0"><a href="tel:+51951402341" class="text-dark text-decoration-none">(+51) 951 402 341</a></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
+                    href="#navbar-vertical" style="height: 65px; padding: 0 30px;" aria-expanded="false" aria-controls="navbar-vertical">
+                    <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categorías</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 19;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dormitorios <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=camas" class="dropdown-item">Camas</a>
+                                <a href="shop.html?category=cabeceras-respaldos" class="dropdown-item">Cabeceras y Respaldos</a>
+                                <a href="shop.html?category=mesas-noche" class="dropdown-item">Mesas de Noche</a>
+                                <a href="shop.html?category=roperos-closets" class="dropdown-item">Roperos y Clósets</a>
+                                <a href="shop.html?category=espejos-dormitorio" class="dropdown-item">Espejos de Dormitorio</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cocinas <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=mesas-cocina" class="dropdown-item">Mesas para Cocina</a>
+                                <a href="shop.html?category=sillas-bancos-cocina" class="dropdown-item">Sillas y Bancos</a>
+                                <a href="shop.html?category=muebles-electrodomesticos" class="dropdown-item">Muebles para Electrodomésticos</a>
+                                <a href="shop.html?category=bar-mini-bares" class="dropdown-item">Bar y Mini Bares</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oficinas <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=escritorios" class="dropdown-item">Escritorios</a>
+                                <a href="shop.html?category=sillas-oficina" class="dropdown-item">Sillas de Oficina</a>
+                                <a href="shop.html?category=estantes-libreros" class="dropdown-item">Estantes y Libreros</a>
+                                <a href="shop.html?category=archivadores" class="dropdown-item">Archivadores</a>
+                                <a href="shop.html?category=muebles-computadora" class="dropdown-item">Muebles para Computadora</a>
+                                <a href="shop.html?category=accesorios-oficina" class="dropdown-item">Accesorios para Oficina</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salas<i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=sofas-seccionales" class="dropdown-item">Sofás y Seccionales</a>
+                                <a href="shop.html?category=sillones-butacas" class="dropdown-item">Sillones y Butacas</a>
+                                <a href="shop.html?category=muebles-tv" class="dropdown-item">Muebles para TV</a>
+                                <a href="shop.html?category=vitrinas-consolas" class="dropdown-item">Vitrinas y Consolas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comedores <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=mesas-comedor" class="dropdown-item">Mesas de Comedor</a>
+                                <a href="shop.html?category=sillas-comedor" class="dropdown-item">Sillas de Comedor</a>
+                                <a href="shop.html?category=bancos-comedor" class="dropdown-item">Bancos para Comedor</a>
+                                <a href="shop.html?category=buffets-credenzas" class="dropdown-item">Buffets y Credenzas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jardín y Exteriores <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=mesas-jardin" class="dropdown-item">Mesas de Jardín</a>
+                                <a href="shop.html?category=sillas-bancos-exterior" class="dropdown-item">Sillas y Bancos de Exterior</a>
+                                <a href="shop.html?category=salas-exteriores" class="dropdown-item">Salas para Exteriores</a>
+                                <a href="shop.html?category=hamacas-columpios" class="dropdown-item">Hamacas y Columpios</a>
+                                <a href="shop.html?category=sombrillas-pergolas" class="dropdown-item">Sombrillas y Pérgolas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infantiles <i
+                                        class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=camas-infantiles" class="dropdown-item">Camas Infantiles</a>
+                                <a href="shop.html?category=escritorios-niños" class="dropdown-item">Escritorios para Niños</a>
+                                <a href="shop.html?category=cajoneras-estanterias-infantiles" class="dropdown-item">Cajoneras y Estanterías Infantiles</a>
+                                <a href="shop.html?category=sillas-niños" class="dropdown-item">Sillas para Niños</a>
+                                <a href="shop.html?category=mesas-juego" class="dropdown-item">Mesas de Juego</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Terraza
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=muebles-exterior" class="dropdown-item">Muebles de Exterior</a>
+                                <a href="shop.html?category=sombrillas-toldos" class="dropdown-item">Sombrillas y Toldos</a>
+                                <a href="shop.html?category=sillas-mesas-jardin" class="dropdown-item">Sillas y Mesas de Jardín</a>
+                                <a href="shop.html?category=decoracion-terraza" class="dropdown-item">Decoración para Terraza</a>
+                                <a href="shop.html?category=cojines-textiles-exteriores" class="dropdown-item">Cojines y Textiles Exteriores</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baño
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=muebles-baño" class="dropdown-item">Muebles de Baño</a>
+                                <a href="shop.html?category=espejos-baño" class="dropdown-item">Espejos</a>
+                                <a href="shop.html?category=accesorios-baño" class="dropdown-item">Accesorios de Baño</a>
+                                <a href="shop.html?category=cestas-almacenamiento" class="dropdown-item">Cestas de Almacenamiento</a>
+                                <a href="shop.html?category=textiles-baño" class="dropdown-item">Textiles de Baño</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tendencias
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="shop.html?category=estilos-decoracion" class="dropdown-item">Estilos de Decoración</a>
+                                <a href="shop.html?category=nuevos-productos" class="dropdown-item">Nuevos Productos</a>
+                                <a href="shop.html?category=consejos-estilo" class="dropdown-item">Consejos de Estilo</a>
+                                <a href="shop.html?category=inspiracion-hogar" class="dropdown-item">Inspiración para el Hogar</a>
+                                <a href="shop.html?category=ofertas-promociones" class="dropdown-item">Ofertas y Promociones</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <a href="index.html" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Tienda</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                            <a href="shop.html" class="nav-item nav-link">Tienda</a>
+                            <a href="detail.html" class="nav-item nav-link">Detalles de la Compra</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pagos<i
+                                            class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                    <a href="cart.html" class="dropdown-item">Carrito de Compra</a>
+                                    <a href="checkout.html" class="dropdown-item">Verificar</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        </div>
+                        <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+                            <a href="productos_favoritos.html" class="btn px-0" aria-label="Productos favoritos">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle"
+                                    style="padding-bottom: 5px;">Favoritos</span>
+                            </a>
+                            <a href="cart.html" class="btn px-0 ml-3" aria-label="Carrito de compras">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle"
+                                    style="padding-bottom: 5px;">Carrito</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="shop.html">Tienda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Registro de Producto</li> </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Registro de Producto</h1>
+
+        <div id="mensajeExito" class="alert alert-success d-none" role="alert">
+            ¡Producto añadido con éxito!
+        </div>
+
+        <form id="registroProductoForm" action="http://localhost/sisventas/admin/sistema_ventas/app/ajax/productoAjax.php" method="POST" autocomplete="off" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="modulo_producto" value="registrar">
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="producto_codigo">Código de producto <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_codigo" name="producto_codigo" pattern="[a-zA-Z0-9- ]{1,77}" maxlength="77" required aria-describedby="codigoHelp">
+                    <small id="codigoHelp" class="form-text text-muted">Hasta 77 caracteres alfanuméricos, guiones y espacios.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un código de producto válido.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="producto_nombre">Nombre <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_nombre" name="producto_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,100}" maxlength="100" required aria-describedby="nombreHelp">
+                    <small id="nombreHelp" class="form-text text-muted">Hasta 100 caracteres alfanuméricos, acentos y símbolos comunes.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un nombre de producto válido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="producto_precio_compra">Precio de compra <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_precio_compra" name="producto_precio_compra" pattern="[0-9.]{1,30}" maxlength="30" required aria-describedby="precioCompraHelp">
+                    <small id="precioCompraHelp" class="form-text text-muted">Solo números y puntos para decimales.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un precio de compra válido.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="producto_precio_venta">Precio de venta <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_precio_venta" name="producto_precio_venta" pattern="[0-9.]{1,30}" maxlength="30" required aria-describedby="precioVentaHelp">
+                    <small id="precioVentaHelp" class="form-text text-muted">Solo números y puntos para decimales.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un precio de venta válido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="producto_stock">Stock y existencias <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="producto_stock" name="producto_stock" min="0" required aria-describedby="stockHelp">
+                    <small id="stockHelp" class="form-text text-muted">Solo números enteros, mínimo 0.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un stock válido (número entero positivo).
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="producto_marca">Marca <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_marca" name="producto_marca" pattern="[a-zA-Z0-9- ]{1,35}" maxlength="35" required aria-describedby="marcaHelp">
+                    <small id="marcaHelp" class="form-text text-muted">Hasta 35 caracteres alfanuméricos, guiones y espacios.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce una marca válida.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="producto_modelo">Modelo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="producto_modelo" name="producto_modelo" pattern="[a-zA-Z0-9- ]{1,35}" maxlength="35" required aria-describedby="modeloHelp">
+                    <small id="modeloHelp" class="form-text text-muted">Hasta 35 caracteres alfanuméricos, guiones y espacios.</small>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un modelo válido.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="producto_unidad">Presentación del producto <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="producto_unidad" name="producto_unidad" required>
+                        <option value="Unidad" selected>Unidad</option>
+                        </select>
+                    <div class="invalid-feedback">
+                        Por favor, selecciona una unidad de presentación.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="producto_categoria">Categoría <span class="text-danger">*</span></label>
+                <select class="custom-select" id="producto_categoria" name="producto_categoria" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Silla</option>
+                    <option value="2">Mesa</option>
+                    <option value="3">Ropero</option>
+                    <option value="4">Estantería</option>
+                    <option value="5">Armario</option>
+                    <option value="6">Cabecera</option>
+                    <option value="7">Taburete</option>
+                    <option value="8">Banco</option>
+                    <option value="9">Escritorio</option>
+                    <option value="10">Estante</option>
+                    <option value="11">Librero</option>
+                    <option value="12">Velador</option>
+                    <option value="13">Cómoda</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecciona una categoría.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="producto_foto">Foto o imagen del producto</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="producto_foto" name="producto_foto" accept=".jpg, .png, .jpeg">
+                    <label class="custom-file-label" for="producto_foto" data-browse="Examinar">Seleccionar archivo...</label>
+                    <small class="form-text text-muted">Solo se permiten archivos JPG, PNG o JPEG.</small>
+                    <div class="invalid-feedback">
+                        Por favor, sube una imagen del producto (JPG, PNG, JPEG).
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="reset" class="btn btn-light mr-2">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Guardar Producto</button>
+            </div>
+            <p class="text-center pt-3 text-muted">
+                <small><span class="text-danger">*</span> Los campos marcados son obligatorios</small>
+            </p>
+        </form>
+    </div>
+    <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4"><b>ACERCA DE</b></h5>
+                <p class="mb-4">Nuestro estudio de diseño ayuda a los clientes a tomar decisiones inteligentes y evitar
+                    errores costosos. Permita que nuestros diseñadores y arquitectos hagan realidad el espacio de sus
+                    sueños.</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>San Sebastian, Alto Qosqo, CA San Hilarion</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>MuebleriasCosme@gmail.com, CosmeHuari25@gmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i><a href="tel:+51951402341" class="text-secondary text-decoration-none">(+51) 951 402 341</a></p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>Ofrecemos</b></h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-secondary mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Nuestra Tienda</a>
+                            <a class="text-secondary mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Detalles del Producto</a>
+                            <a class="text-secondary mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Carrito de Compra</a>
+                            <a class="text-secondary mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Verificar Pedido</a>
+                            <a class="text-secondary" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contáctenos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>Servicios</b></h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="servicios.html#tapizados"><i class="fa fa-angle-right mr-2"></i>Tapizados</a>
+                            <a class="text-secondary mb-2" href="servicios.html#restauracion"><i class="fa fa-angle-right mr-2"></i>Restauración</a>
+                            <a class="text-secondary mb-2" href="servicios.html#pintura"><i class="fa fa-angle-right mr-2"></i>Pintura</a>
+                            <a class="text-secondary mb-2" href="servicios.html#tratamientos"><i class="fa fa-angle-right mr-2"></i>Tratamientos</a>
+                            <a class="text-secondary mb-2" href="servicios.html#recubrimiento"><i class="fa fa-angle-right mr-2"></i>Recubrimiento</a>
+                            <a class="text-secondary" href="servicios.html#instalaciones"><i class="fa fa-angle-right mr-2"></i>Instalaciones</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4"><b>¡Contáctanos!</b></h5>
+                        <p>Suscríbete para recibir noticias sobre nuestras últimas ofertas y promociones.</p>
+                        <form method="post" action="registro_correo.html">
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="correo" placeholder="Ingresar Email" required aria-label="Ingresar tu correo electrónico para suscripción">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="text-secondary text-uppercase mt-4 mb-3">Síguenos en nuestras Redes Sociales</h6>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#" aria-label="Síguenos en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">Cosme Store</a>. Todos los derechos reservados. Diseñado por
+                    <a class="text-primary" href="https://htmlcodex.com" target="_blank" rel="noopener noreferrer">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="Métodos de pago aceptados: Visa, Mastercard, American Express, PayPal">
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-registration.js"></script> 
+
+
+
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+
+    </body>
+    
+</html>

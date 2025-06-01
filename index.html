@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosme Store - Muebles Modernos para tu Hogar</title>
+
+    <link href="img/icon.png" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* General Body and Typography */
+        body {
+            font-family: 'Poppins', sans-serif; /* Primary font for body */
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Headings font */
+            font-weight: 600;
+        }
+
+        /* Header Carousel - Enhanced Visuals */
+        #header-carousel {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Adjust height for impact */
+            overflow: hidden;
+            background-color: #f8f9fa; /* Fallback background */
+        }
+
+        #header-carousel .carousel-item {
+            height: 80vh;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        #header-carousel .carousel-item img {
+            object-fit: cover;
+            filter: brightness(0.7); /* Darken image for text readability */
+            transition: filter 0.5s ease;
+        }
+
+        #header-carousel .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3); /* Subtle background for text */
+            border-radius: 10px;
+            animation-duration: 1.5s; /* Animation for text */
+        }
+
+        #header-carousel .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        #header-carousel .carousel-caption p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+        #header-carousel .carousel-caption .btn {
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        #header-carousel .carousel-caption .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Services/Benefits Section */
+        .container-web-page .col-md-4 {
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .container-web-page .col-md-4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+        .container-web-page .fa-5x {
+            color: #FFD333; /* Primary color for icons */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .container-web-page .col-md-4:hover .fa-5x {
+            transform: scale(1.1);
+        }
+        .container-web-page h5 {
+            color: #3D464D; /* Darker heading color */
+            margin-bottom: 15px;
+        }
+        .container-web-page p {
+            color: #6C757D; /* Muted text color */
+            line-height: 1.7;
+        }
+
+        /* Categories Section (Circles) */
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 15px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #eee;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border-color: #FFD333;
+        }
+        .category img {
+            border-radius: 50%;
+            width: 120px; /* Slightly adjusted size */
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #ddd; /* Subtle border for images */
+            transition: border-color 0.3s ease;
+        }
+        .category:hover img {
+            border-color: #FFD333; /* Highlight border on hover */
+        }
+        .category p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #3D464D;
+            transition: color 0.3s ease;
+        }
+        .category:hover p {
+            color: #FFD333; /* Highlight text on hover */
+        }
+        .category-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            padding: 30px 0;
+            background-color: #f8f9fa; /* Light background for the section */
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Product Cards */
+        .product-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        .product-img {
+            height: 250px; /* Fixed height for product images */
+            overflow: hidden;
+            position: relative;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .product-item:hover .product-img img {
+            transform: scale(1.05);
+        }
+        .product-action {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5); /* Semi-transparent overlay */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .product-item:hover .product-action {
+            opacity: 1;
+        }
+        .product-action .btn-square {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            color: #3D464D;
+            margin: 0 5px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .product-action .btn-square:hover {
+            background-color: #FFD333;
+            color: #fff;
+        }
+        .product-item .text-center {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .product-item .text-center a {
+            color: #3D464D;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            white-space: normal; /* Allow text to wrap */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 3.2em; /* Approx 2 lines */
+            line-height: 1.6em;
+        }
+        .product-item .d-flex h5 {
+            color: #3D464D;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .product-item .d-flex h6 {
+            color: #6C757D;
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+        .product-item .fa-star {
+            color: #FFD333;
+        }
+        .product-item .fa-star-half-alt {
+            color: #FFD333;
+        }
+        .product-item small {
+            color: #6C757D;
+        }
+
+        /* Section Titles */
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #3D464D;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: #FFD333;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            border-radius: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #3D464D;
+            color: #fff;
+            padding: 45px 0 30px 0;
+            font-size: 0.95rem;
+        }
+        .footer .btn.btn-primary {
+            background-color: #FFD333 !important;
+            border-color: #FFD333 !important;
+        }
+        .footer .btn.btn-primary:hover {
+            background-color: #e6b300 !important;
+            border-color: #e6b300 !important;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #FFD333;
+        }
+        .footer .col-md-6, .footer .col-md-3 {
+            margin-bottom: 25px;
+        }
+        .footer .h5 {
+            color: #fff;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-secondary py-1 px-xl-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="d-inline-flex align-items-center h-100">
+                    <a class="text-body mr-3" href="acerca.html">Acerca de</a>
+                    <a class="text-body mr-3" href="contact.html">Contacto</a>
+                    <a class="text-body mr-3" href="servicios.html">Servicios</a>
+                    <a class="text-body mr-3" href="centro_ayuda.html">Ayuda</a>
+                    <a class="text-body mr-3" href="preguntas_frecuentes.html">Preguntas Frecuentes</a>
+                </nav>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false" aria-label="Abrir menú Mi Cuenta">Mi
+                            Cuenta</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="cuenta.html">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="registro_usuario.html">Registrarse</a>
+                        </div>
+                    </div>
+                    <div class="btn-group mx-2">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false" aria-label="Abrir menú Contactos">Contactos</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">(+51) 951 402 341</button>
+                            <button class="dropdown-item" type="button">MuebleriasCosme@gmail.com</button>
+                            <button class="dropdown-item" type="button">CosmeHuari25@gmail.com</button>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false" aria-label="Abrir menú Ayuda">Ayuda</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="centro_ayuda.html">Centro de Ayuda</a>
+                            <a class="dropdown-item" href="horario_atencion.html">Horario de Atención</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-inline-flex align-items-center d-block d-lg-none">
+                    <a href="productos_favoritos.html" class="btn px-0 ml-2" aria-label="Ver productos favoritos">
+                        <i class="fas fa-heart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle"
+                            style="padding-bottom: 2px;">0</span>
+                    </a>
+                    <a href="cart.html" class="btn px-0 ml-2" aria-label="Ver carrito de compras">
+                        <i class="fas fa-shopping-cart text-dark"></i>
+                        <span class="badge text-dark border border-dark rounded-circle"
+                            style="padding-bottom: 2px;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+            <div class="col-lg-4">
+                <a href="index.html" class="text-decoration-none" aria-label="Ir a la página de inicio de Cosme Store">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">Cosme</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Store</span>
+                </a>
+            </div>
+            <div class="col-lg-4 col-6 text-left">
+                <form action="#" method="get" role="search">
+                    <div class="input-group">
+                        <label for="search-product" class="sr-only">Buscar Producto</label>
+                        <input type="text" class="form-control" id="search-product" placeholder="Buscar Producto"
+                            aria-label="Buscar producto">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-6 text-right">
+                <p class="m-0">Servicio al Cliente</p>
+                <h5 class="m-0">(+51) 951 402 341</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
+                    href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
+                    <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categorías</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 19;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dormitorios <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Camas</a>
+                                <a href="" class="dropdown-item">Cabeceras y Respaldos</a>
+                                <a href="" class="dropdown-item">Mesas de Noche</a>
+                                <a href="" class="dropdown-item">Roperos y Clósets</a>
+                                <a href="" class="dropdown-item">Espejos de Dormitorio</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cocinas <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Mesas para Cocin</a>
+                                <a href="" class="dropdown-item">Sillas y Bancos</a>
+                                <a href="" class="dropdown-item">Muebles para Electrodomésticos</a>
+                                <a href="" class="dropdown-item">Bar y Mini Bares</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Oficinas <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Escritorios</a>
+                                <a href="" class="dropdown-item">Sillas de Oficina</a>
+                                <a href="" class="dropdown-item">Estantes y Libreros</a>
+                                <a href="" class="dropdown-item">Archivadores</a>
+                                <a href="" class="dropdown-item">Muebles para Computadora</a>
+                                <a href="" class="dropdown-item">Accesorios para Oficina</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Salas<i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Sofás y Seccionales</a>
+                                <a href="" class="dropdown-item">Sillones y Butacas</a>
+                                <a href="" class="dropdown-item">Muebles para TV</a>
+                                <a href="" class="dropdown-item">Vitrinas y Consolas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Comedores <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Mesas de Comedor</a>
+                                <a href="" class="dropdown-item">Sillas de Comedor</a>
+                                <a href="" class="dropdown-item">Bancos para Comedor</a>
+                                <a href="" class="dropdown-item">Buffets y Credenzas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jardín y Exteriores <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Mesas de Jardín</a>
+                                <a href="" class="dropdown-item">Sillas y Bancos de Exterior</a>
+                                <a href="" class="dropdown-item">Salas para Exteriores</a>
+                                <a href="" class="dropdown-item">Hamacas y Columpios</a>
+                                <a href="" class="dropdown-item">Sombrillas y Pérgolas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Infantiles <i
+                                    class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Camas Infantiles</a>
+                                <a href="" class="dropdown-item">Escritorios para Niños</a>
+                                <a href="" class="dropdown-item">Cajoneras y Estanterías Infantiles</a>
+                                <a href="" class="dropdown-item">Sillas para Niños</a>
+                                <a href="" class="dropdown-item">Mesas de Juego</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terraza
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Muebles de Exterior</a>
+                                <a href="" class="dropdown-item">Sombrillas y Toldos</a>
+                                <a href="" class="dropdown-item">Sillas y Mesas de Jardín</a>
+                                <a href="" class="dropdown-item">Decoración para Terraza</a>
+                                <a href="" class="dropdown-item">Cojines y Textiles Exteriores</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Baño
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Muebles de Baño</a>
+                                <a href="" class="dropdown-item">Espejos</a>
+                                <a href="" class="dropdown-item">Accesorios de Baño</a>
+                                <a href="" class="dropdown-item">Cestas de Almacenamiento</a>
+                                <a href="" class="dropdown-item">Textiles de Baño</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tendencias
+                                <i class="fa fa-angle-right float-right mt-1"></i>
+                            </a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="" class="dropdown-item">Estilos de Decoración</a>
+                                <a href="" class="dropdown-item">Nuevos Productos</a>
+                                <a href="" class="dropdown-item">Consejos de Estilo</a>
+                                <a href="" class="dropdown-item">Inspiración para el Hogar</a>
+                                <a href="" class="dropdown-item">Ofertas y Promociones</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Tienda</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                            <a href="shop.html" class="nav-item nav-link">Tienda</a>
+                            <a href="detail.html" class="nav-item nav-link">Detalles de la Compra</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pagos<i
+                                        class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                    <a href="cart.html" class="dropdown-item">Carrito de Compra</a>
+                                    <a href="checkout.html" class="dropdown-item">Verificar</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        </div>
+                        <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+                            <a href="productos_favoritos.html" class="btn px-0">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle"
+                                    style="padding-bottom: 5px;">Favoritos</span>
+                            </a>
+                            <a href="cart.html" class="btn px-0 ml-3">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle"
+                                    style="padding-bottom: 5px;">Carrito</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-3">
+        <div class="row px-xl-5">
+            <div class="col-lg-12">
+                <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#header-carousel" data-slide-to="1"></li>
+                        <li data-target="#header-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item position-relative active">
+                            <img class="position-absolute w-100 h-100" src="img/plantilla1.jpg" alt="Muebles Modernos" loading="lazy">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3 animated slideInDown">
+                                    <h1 class="display-3 text-white mb-3">Tu Hogar, Tu Estilo</h1>
+                                    <p class="mx-md-5 px-5">Descubre nuestra exclusiva colección de mesas y sillas modernas. Diseños que transforman cada espacio.</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.html">Ver Colección</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img class="position-absolute w-100 h-100" src="img/plantilla2.jpg" alt="Ofertas de Verano" loading="lazy">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3 animated slideInDown">
+                                    <h1 class="display-3 text-white mb-3">Ofertas Irresistibles</h1>
+                                    <p class="mx-md-5 px-5">Renueva tu comedor con descuentos especiales en mesas y sillas. Calidad y diseño al mejor precio.</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.html">Explorar Ofertas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img class="position-absolute w-100 h-100" src="img/plantilla3.jpg" alt="Diseño y Confort" loading="lazy">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3 animated slideInDown">
+                                    <h1 class="display-3 text-white mb-3">Confort y Elegancia</h1>
+                                    <p class="mx-md-5 px-5">Cada pieza es una declaración de estilo. Encuentra la combinación perfecta para tu sala de estar.</p>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.html">Comprar Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-web-page border-bottom bg-white">
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 text-center">
+                <p><i class="fas fa-shipping-fast fa-5x"></i></p>
+                <h5 class="text-uppercase font-weight-bold">Envíos a domicilio</h5>
+                <p>Opciones de envío flexibles y convenientes para satisfacer tus necesidades, directo a tu puerta.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 text-center">
+                <p><i class="fas fa-boxes fa-5x"></i></p>
+                <h5 class="text-uppercase font-weight-bold">Calidad y Precio</h5>
+                <p>Muebles de alta calidad a precios competitivos, una inversión en durabilidad y estilo.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 text-center">
+                <p><i class="fas fa-store-alt fa-5x"></i></p>
+                <h5 class="text-uppercase font-weight-bold">Personalización de Muebles</h5>
+                <p>Crea muebles que reflejen tu estilo único. Elige materiales, colores y diseños personalizados.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <h2><b>Explora por Categoría</b></h2>
+    </div>
+    <div class="container category-container">
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c1.png" alt="Sala" loading="lazy">
+                <p><b>Sala</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c2.png" alt="Comedor" loading="lazy">
+                <p><b>Comedor</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c3.png" alt="Dormitorio" loading="lazy">
+                <p><b>Dormitorio</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c4.png" alt="Oficina" loading="lazy">
+                <p><b>Oficina</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c5.png" alt="Infantiles" loading="lazy">
+                <p><b>Infantiles</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c6.png" alt="Jardín y Exteriores" loading="lazy">
+                <p><b>Exterior</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c7.png" alt="Baño y Cocina" loading="lazy">
+                <p><b>Baño</b></p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="shop.html" style="text-decoration: none; color: inherit;">
+                <img src="img/c8.png" alt="Tendencias" loading="lazy">
+                <p><b>Tendencias</b></p>
+            </a>
+        </div>
+    </div>
+    <div class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <h2><b>PRODUCTOS DESTACADOS</b></h2>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p1.jpg" alt="Cómoda Alta de Madera" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="1">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square"
+                                onclick="setTimeout(function() { window.location.href='mensaje_favoritos.html'; }, 500);" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Cómoda Alta, De Madera</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/449.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/469.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p2.jpg" alt="Escritorio con Cajones" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="2">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Escritorio 4 cajones banco tapizado</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/379.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/399.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p3.jpg" alt="Estante de Madera" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="3">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Estante o biblioteca de Madera de 6 divisiones</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/159.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/179.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p4.jpg" alt="Estantería con Ruedas" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="4">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Estantería de Madera con Ruedas</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/79.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/99.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <h2><b>ÚLTIMAS PUBLICACIONES</b></h2>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p5.jpg" alt="Mesa de Comedor de Madera" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="5">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Mesa de Comedor de Madera</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/99.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/119.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p6.jpg" alt="Mesa de Madera" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="6">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Mesa de Madera</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/89.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/109.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p7.png" alt="Ropero de Madera" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="7">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Ropero de Madera de 2 puertas</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/179.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/199.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p8.jpg" alt="Banco de Madera para Exteriores" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="8">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Banco de madera para exteriores, con respaldo y reposabrazos</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/110.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/117.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/p9.jpg" alt="Escritorio de Madera con Cajones" loading="lazy">
+                    <div class="product-action">
+                        <form method="post" action="favoritos.html">
+                            <input type="hidden" name="product_id" value="9">
+                            <input type="hidden" name="action" value="add">
+                            <button type="submit" class="btn btn-outline-dark btn-square" aria-label="Añadir a favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-dark btn-square" href="cart.html" aria-label="Añadir al carrito"><i
+                                class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Escritorio de Madera con Cajones</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>S/199.99</h5>
+                        <h6 class="text-muted ml-2"><del>S/220.99</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small>(1)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary mt-5 pt-5 footer">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4">Ponte en Contacto</h5>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Av. Sol 123, Cusco, Perú</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@cosmestore.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+51 951 402 341</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Nuestra Tienda</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-secondary mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Nuestra Tienda</a>
+                            <a class="text-secondary mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Detalles del Producto</a>
+                            <a class="text-secondary mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Carrito de Compras</a>
+                            <a class="text-secondary mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Pagar</a>
+                            <a class="text-secondary" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contáctanos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Mi Cuenta</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="cuenta.html"><i class="fa fa-angle-right mr-2"></i>Iniciar Sesión</a>
+                            <a class="text-secondary mb-2" href="registro_usuario.html"><i class="fa fa-angle-right mr-2"></i>Registrarse</a>
+                            <a class="text-secondary mb-2" href="productos_favoritos.html"><i class="fa fa-angle-right mr-2"></i>Mis Favoritos</a>
+                            <a class="text-secondary mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Mi Carrito</a>
+                            <a class="text-secondary mb-2" href="centro_ayuda.html"><i class="fa fa-angle-right mr-2"></i>Centro de Ayuda</a>
+                            <a class="text-secondary" href="horario_atencion.html"><i class="fa fa-angle-right mr-2"></i>Horario de Atención</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">Cosme Store</a>. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="Métodos de Pago" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    
+
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow"
+        style="position: fixed; bottom: 90px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+        aria-label="Abrir o cerrar el chat del asistente virtual">
+  <i class="fas fa-comments fa-lg"></i>
+</button>
+
+<div id="chat-widget-container" class="card shadow"
+     style="position: fixed; bottom: 160px; right: 20px; z-index: 1000; width: 350px; height: 400px; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: none; flex-direction: column;">
+
+  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+    <h5 class="mb-0 text-white">Asistente Virtual</h5>
+    <button id="chat-close-button" class="btn btn-sm btn-light p-1" aria-label="Cerrar ventana del chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="card-body overflow-auto p-3" id="chat-messages-display" style="flex-grow: 1; overflow-y: auto;">
+    <p class="text-muted text-center my-3">Hola, ¿en qué puedo ayudarte hoy?</p>
+    </div>
+
+  <div class="card-footer bg-light p-3">
+    <div class="input-group">
+      <input type="text" id="chat-input-field" class="form-control" placeholder="Escribe tu mensaje..." aria-label="Campo de entrada de mensaje para el chat">
+      <div class="input-group-append">
+        <button class="btn btn-primary" id="chat-send-button">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20necesito%20ayuda%20con..."
+   class="btn rounded-circle shadow whatsapp-button"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"
+   target="_blank" aria-label="Contactar por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    // --- LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidgetContainer = document.getElementById('chat-widget-container');
+    const chatCloseButton = document.getElementById('chat-close-button');
+    const chatInputField = document.getElementById('chat-input-field');
+    const chatSendButton = document.getElementById('chat-send-button');
+    const chatMessagesDisplay = document.getElementById('chat-messages-display');
+
+    // Función para alternar la visibilidad del chat
+    chatToggleButton.addEventListener('click', () => {
+        if (chatWidgetContainer.style.display === 'none' || chatWidgetContainer.style.display === '') {
+            chatWidgetContainer.style.display = 'flex';
+        } else {
+            chatWidgetContainer.style.display = 'none';
+        }
+    });
+
+    // Función para cerrar el chat
+    chatCloseButton.addEventListener('click', () => {
+        chatWidgetContainer.style.display = 'none';
+    });
+
+    // Función para enviar mensaje y agregar al chat
+    function sendMessage() {
+        const message = chatInputField.value.trim();
+        if (message) {
+            // Crear elemento para el mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('d-flex', 'justify-content-end', 'mb-2'); // Alinear a la derecha
+            userMessageDiv.innerHTML = `
+                <div class="p-2 rounded bg-primary text-white" style="max-width: 80%;">
+                    ${message}
+                </div>
+            `;
+            chatMessagesDisplay.appendChild(userMessageDiv);
+
+            // Simular respuesta del asistente (puedes reemplazar esto con tu lógica real)
+            setTimeout(() => {
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('d-flex', 'justify-content-start', 'mb-2'); // Alinear a la izquierda
+                botMessageDiv.innerHTML = `
+                    <div class="p-2 rounded bg-light border" style="max-width: 80%;">
+                        Gracias por tu mensaje. ¿En qué más puedo ayudarte?
+                    </div>
+                `;
+                chatMessagesDisplay.appendChild(botMessageDiv);
+                chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+            }, 500);
+
+            chatInputField.value = ''; // Limpiar el campo de entrada
+            chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight; // Scroll al final
+        }
+    }
+
+    // Evento para enviar mensaje al hacer clic en el botón
+    chatSendButton.addEventListener('click', sendMessage);
+
+    // Evento para enviar mensaje al presionar Enter en el campo de texto
+    chatInputField.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- FIN DE LA LÓGICA JAVASCRIPT PARA EL ASISTENTE ---
+</script>
+
+<style>
+    .whatsapp-button {
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+    }
+    .whatsapp-button:hover {
+        background-color: #1DA851; /* Un tono más oscuro al pasar el ratón */
+        color: white;
+    }
+    .whatsapp-button .fa-whatsapp {
+        font-size: 28px; /* Tamaño del icono de WhatsApp */
+    }
+</style>
+</body>
+
+</html>
